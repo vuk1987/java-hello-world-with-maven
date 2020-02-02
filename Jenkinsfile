@@ -5,7 +5,7 @@ def major_version = 1.0
 node{
 
 stage('cloning repo'){
-chekout scm
+checkout scm
 }
 
 stage('Testing')
@@ -15,7 +15,7 @@ sh 'mvn clean test'
 
 stage('Build the code')
 {
-sh 'mvn clesn install'
+sh 'mvn clean install'
 }
 
 stage ('saving artifacts')
